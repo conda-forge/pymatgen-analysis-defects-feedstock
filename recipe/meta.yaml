@@ -25,6 +25,7 @@ requirements:
     - pymatgen >=2023.5.8
     - scikit-image >=0.19.3
     - numpy
+    - mp-pyrho>=0.4.4
 
 test:
   imports:
