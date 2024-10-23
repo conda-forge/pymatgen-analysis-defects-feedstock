@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - setuptools
     - versioningit
   run:
-    - python >=3.8
+    - python >=3.9
     - pymatgen >=2023.5.8
     - scikit-image >=0.19.3
     - numpy
