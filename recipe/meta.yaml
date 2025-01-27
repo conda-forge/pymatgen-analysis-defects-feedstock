@@ -10,24 +10,26 @@ source:
   sha256: 563b9a07a8a9c05ddd42647d24dfb096f1d5956d1577d00453da418e623a3639
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
     - versioningit
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - pymatgen >=2024.10.22
     - scikit-image >=0.19.3
     - numpy
     - mp-pyrho >=0.4.4
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pymatgen.analysis.defects
     - pymatgen.analysis.defects.core
